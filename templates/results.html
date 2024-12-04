@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+    }
+    h1 {
+      color: #cd0947;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #cd0947;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #cd0947;
+      color: white;
+    }
+    a {
+      color: #cd0947;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for publication in results %}
+      <tr>
+        <td><a href="{{ publication.url }}">{{ publication.author }}</a></td>
+        <td><a href="{{ publication.url }}">{{ publication.title }}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
