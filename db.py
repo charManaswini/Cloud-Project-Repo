@@ -4,9 +4,9 @@ import psycopg2
 # Replace these with your connection details
 conn_details = {
     "host": "localhost",
-    "dbname": "cloud",
-    "user": "postgres",
-    "password": "manu123"
+    "dbname": "ur_db_name",
+    "user": "username",
+    "password": "ur_db_pwd"
 }
 
 # Load data from Excel
